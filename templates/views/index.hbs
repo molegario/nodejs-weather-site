@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/css/styles.css" >
+        <link rel="icon" href="/img/weather.png" >
+    </head>
+    <body>
+        <div class="main-container">
+            {{>header}}
+            <p>Input any location reference and click FORECAST button to get the current forecast at your given location.</p>
+            <form>
+                <input placeholder="location"><button>FORECAST</button>
+            </form>
+            <p id="p-response-1"></p>
+            <p id="p-response-2"></p>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>
