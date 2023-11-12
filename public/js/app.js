@@ -14,7 +14,7 @@ mainForm.addEventListener('submit', evt => {
         return paragraphOne.textContent = "Please enter in the input box a valid location reference."
     }
 
-    fetch(`http://localhost:3000/weather?location=${locationInput.value}`).then(response => {
+    fetch(`/weather?location=${locationInput.value}`).then(response => {
         response.json().then(data => {
             if(data.error) {
                 return paragraphOne.textContent = data.error
