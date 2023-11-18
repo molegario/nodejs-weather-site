@@ -3,6 +3,10 @@ console.log('client side JS file loaded')
 const locationInput = document.querySelector('input')
 const paragraphOne = document.querySelector('#p-response-1')
 const paragraphTwo = document.querySelector('#p-response-2')
+const paragraphThree = document.querySelector('#p-response-3')
+const paragraphFour = document.querySelector('#p-response-4')
+const paragraphFive = document.querySelector('#p-response-5')
+const paragraphSix = document.querySelector('#p-response-6')
 const mainForm = document.querySelector('form')
 
 mainForm.addEventListener('submit', evt => {
@@ -19,8 +23,12 @@ mainForm.addEventListener('submit', evt => {
             if(data.error) {
                 return paragraphOne.textContent = data.error
             }
-            paragraphOne.textContent =  `Forecast for ${data.placeName} at coordinates ${data.mapCoords}`
+            paragraphOne.innerHTML =  `Forecast for ${data.placeName} <br>at coordinates ${data.mapCoords}`
             paragraphTwo.textContent = data.forecast
+            paragraphThree.textContent = `Atmospheric Pressure: ${data.pressure} milliBars.`
+            paragraphFour.textContent = `Windspeed: ${data.wind_speed} mph`
+            paragraphFive.textContent = `Humidity: ${data.humidity}%`
+            paragraphSix.textContent = `UV index: ${data.uv_index}`
         })
     })
 })

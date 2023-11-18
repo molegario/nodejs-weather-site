@@ -72,7 +72,11 @@ app.get('/weather', (req, res) => {
                 weather_descriptions,
                 temperature,
                 resp_units,
-                feelslike        
+                feelslike,
+                wind_speed,
+                pressure,
+                humidity,
+                uv_index
             } = {}
         ) => {
             if(error_forecast) {
@@ -83,7 +87,11 @@ app.get('/weather', (req, res) => {
             res.send({
                 placeName,
                 mapCoords,
-                forecast: `${weather_descriptions}. It is currently ${temperature}\u00B0${resp_units} out. It feels like ${feelslike}\u00B0${resp_units} out.`
+                forecast: `${weather_descriptions}. It is currently ${temperature}\u00B0${resp_units} out. It feels like ${feelslike}\u00B0${resp_units} out.`,
+                wind_speed,
+                pressure,
+                humidity,
+                uv_index
             })
         })
     })

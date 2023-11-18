@@ -48,7 +48,7 @@ header a:hover {
 }
 
 .main-container {
-    width: 100%;
+    width: 420px;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -86,4 +86,16 @@ input {
 
 button {
     padding: 4px 8px;
+}
+
+#data-stack {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#p-response-1, #p-response-2 {
+    margin-bottom: 8px;
 }
